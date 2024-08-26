@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Sirswal - Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        a:hover {
+            color: #23527c;
+        }
+
+        h1, h2, h3 {
+            font-weight: normal;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header h1:hover {
+            color: #61e3da;
+        }
+
+        header p {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: underline;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header a:hover {
+            color: #ccc;
+        }
+
+        /* Home Styles */
+        #home {
+            background-image: linear-gradient(to bottom, #337ab7, #fff);
+            background-size: 100% 300px;
+            background-position: 0% 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #home h2:hover {
+            transform: scale(1.1);
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .box1 {
+            background-color: #eeeef1;
+            color: #337ab7;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            width: calc(30% - 1rem);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .box1:hover {
+            background-color: #337ab7;
+            color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .box1 h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .box {
+            background-color: #eeeef1;
+            color: #337ab7;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            width: calc(25% - 1rem);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box:hover {
+            background-color: #337ab7;
+            color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box {
+                width: calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                width: calc(100% - 1rem);
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* JavaScript Style Update */
+        .night-mode {
+            background-color: #333;
+            color: #f9f9f9;
+        }
+
+        .night-mode a {
+            color: #9ab;
+        }
+
+        .night-mode header {
+            background-color: #444;
+        }
+
+        .night-mode header a {
+            color: #ddd;
+        }
+
+        .night-mode #home {
+            background-image: linear-gradient(to bottom, #444, #333);
+        }
+    </style>
+    <script>
+        function toggleNightMode() {
+            document.body.classList.toggle('night-mode');
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Ayush Sirswal</h1>
+            <p>Dehradun, India 248008 | 6396697489 | ayushsirswal1234@gmail.com | <a href="https://www.linkedin.com/in/ayush-sirswal-b05572252" target="_blank">LinkedIn</a></p>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <main>
+        <section id="home" class="animated">
+            <div class="container">
+                <h2>Welcome to my Portfolio</h2>
+                <p>Explore my skills, education, and projects below.</p>
+                <div class="boxes">
+                    <a href="education.html" class="box1">
+                        <h3>Education</h3>
+                    </a>
+                    <a href="skills.html" class="box">
+                        <h3>Skills</h3>
+                    </a>
+                    <a href="projects.html" class="box">
+                        <h3>Projects</h3>
+                    </a>
+                    <a href="about.html" class="box">
+                        <h3>About Me</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toggle Night Mode Button -->
+    <button onclick="toggleNightMode()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; border: none; border-radius: 25px; background-color: #ff69b4; color: #fff; cursor: pointer; font-size: 16px;">Toggle Night Mode</button>
+</body>
+</html>
